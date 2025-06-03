@@ -38,10 +38,69 @@ myBool = true
 console.log(myBool)
 console.log(typeof myBool)
 
+//constantes
+
+const myConst = 'Mi propiedad constante'
+console.log(myConst)
+console.log(typeof myConst)
+
+
 //controles de flujo
 
 if(myNumber == 10){
     console.log('El valor es 10')
-}else{
-    console.log('El valor no es 10')
+} else if(myNumber == 9){
+    console.log('El valor es 9')
 }
+else{
+    console.log('El valor no es 10 ni 9')
+}
+
+
+
+//Funciones
+
+function myFunction(){
+    console.log('Mi funcion')
+}
+
+myFunction()
+
+function sumTwoNumbers(firstNumber: number, secondNumber:number){
+    return firstNumber + secondNumber
+}
+
+console.log(sumTwoNumbers(7,8))
+
+//List
+
+let myList: Array<string> = ['Julian','Millen','@jmillen']
+console.log(myList)
+
+//Set
+
+let mySet: Set<string> = new Set(["Julian","Millen","@jmillen","Julian"])
+console.log(myList)
+
+
+//Map
+
+let myMap:Map<string,number> = new Map([['Julian',26],['Garces',34]])
+myMap.set("JJJ27",25)
+console.log(myMap)
+
+
+//Bucles
+
+for (const value of myList){
+    console.log(value)
+}
+
+let myCounter = 0
+
+while (myCounter < myList.length){
+    console.log(myList[myCounter])
+    myCounter++
+}
+
+// Clases
