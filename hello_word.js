@@ -60,7 +60,7 @@ console.log(myList);
 var myMap = new Map([['Julian', 26], ['Garces', 34]]);
 myMap.set("JJJ27", 25);
 console.log(myMap);
-//bucles
+//Bucles
 for (var _i = 0, myList_1 = myList; _i < myList_1.length; _i++) {
     var value = myList_1[_i];
     console.log(value);
@@ -70,3 +70,25 @@ while (myCounter < myList.length) {
     console.log(myList[myCounter]);
     myCounter++;
 }
+// Clases
+var MyClass = /** @class */ (function () {
+    function MyClass(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    return MyClass;
+}());
+var myClass = new MyClass('Juan Carlos', 55);
+console.log(myClass.name);
+//Enum
+var MyEnum;
+(function (MyEnum) {
+    MyEnum["DART"] = "dart";
+    MyEnum["PYTHON"] = "python";
+    MyEnum["SWIFT"] = "swift";
+    MyEnum["JAVA"] = "java";
+    MyEnum["KOTLIN"] = "kotlin";
+    MyEnum["JAVASCRIPT"] = "javascript";
+})(MyEnum || (MyEnum = {}));
+var myEnum = MyEnum.DART;
+console.log(myEnum);
