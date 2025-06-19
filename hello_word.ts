@@ -131,3 +131,85 @@ enum MyEnum {
 
 const myEnum = MyEnum.DART
 console.log(myEnum)
+
+
+
+//Type Alias
+
+type Hero = {
+    name: string
+    age: number
+}
+
+let hero:Hero = {
+    name: 'Batman',
+    age: 39
+}
+
+function createHero(name:string, age:number):Hero {
+    return {name,age}
+}
+
+const batman = createHero('Batman',39)
+console.log(batman)
+
+//Type from value
+
+const address = {
+    planet: 'Earth',
+    city: 'Madrid'
+}
+
+type Address = typeof address
+
+const addresTwitch: Address = {
+    planet: 'Mars',
+    city: 'Twitch'
+}
+
+console.log(addresTwitch)
+
+
+//Type from function return
+
+function createAddress(){
+    return {
+        planet: 'Tierra',
+        city: 'Argentina'
+    }
+}
+
+//type Address = ReturnType<typeof createAddress>
+
+
+//Arrays
+
+const language : string[] = []
+language.push("Java")
+language.push("JavaScript")
+language.push("C#")
+language.push("Python")
+language.push("Swift")
+
+console.log(language);
+console.log(typeof language);
+
+//Matrices
+
+type CellValue = 'X' | 'O' | ''
+type GameBoard = [
+    [CellValue, CellValue, CellValue],
+    [CellValue, CellValue, CellValue]
+    [CellValue, CellValue, CellValue]
+]
+
+const gameBoar:GameBoard = [
+    ['X','O','X'],
+    ['O','X','O'],
+    ['X','','O']
+]
+console.log(gameBoar)
+
+//Si no le decimos los valores que queremos en las celdas y la cantidad,
+// el usuario puede escribir cualquier cosa las veces que quiera.
+

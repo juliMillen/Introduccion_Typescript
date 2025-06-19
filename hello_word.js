@@ -92,3 +92,47 @@ var MyEnum;
 })(MyEnum || (MyEnum = {}));
 var myEnum = MyEnum.DART;
 console.log(myEnum);
+var hero = {
+    name: 'Batman',
+    age: 39
+};
+function createHero(name, age) {
+    return { name: name, age: age };
+}
+var batman = createHero('Batman', 39);
+console.log(batman);
+//Type from value
+var address = {
+    planet: 'Earth',
+    city: 'Madrid'
+};
+var addresTwitch = {
+    planet: 'Mars',
+    city: 'Twitch'
+};
+console.log(addresTwitch);
+//Type from function return
+function createAddress() {
+    return {
+        planet: 'Tierra',
+        city: 'Argentina'
+    };
+}
+//type Address = ReturnType<typeof createAddress>
+//Arrays
+var language = [];
+language.push("Java");
+language.push("JavaScript");
+language.push("C#");
+language.push("Python");
+language.push("Swift");
+console.log(language);
+console.log(typeof language);
+var gameBoar = [
+    ['X', 'O', 'X'],
+    ['O', 'X', 'O'],
+    ['X', '', 'O']
+];
+console.log(gameBoar);
+//Si no le decimos los valores que queremos en las celdas y la cantidad,
+// el usuario puede escribir cualquier cosa las veces que quiera.
