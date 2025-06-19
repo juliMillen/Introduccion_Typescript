@@ -128,6 +128,12 @@ language.push("Python");
 language.push("Swift");
 console.log(language);
 console.log(typeof language);
+//Matriz de 3 x 3
+var board = [
+    ['X', '', ''],
+    ['', 'X', ''],
+    ['', '', 'O']
+];
 var gameBoar = [
     ['X', 'O', 'X'],
     ['O', 'X', 'O'],
@@ -136,3 +142,23 @@ var gameBoar = [
 console.log(gameBoar);
 //Si no le decimos los valores que queremos en las celdas y la cantidad,
 // el usuario puede escribir cualquier cosa las veces que quiera.
+// Si queremos que sean fijas y que no sean mutables agregar readonly en su definicion
+//Enums
+var ERROR_TYPES;
+(function (ERROR_TYPES) {
+    ERROR_TYPES[ERROR_TYPES["NOT_FOUND"] = 0] = "NOT_FOUND";
+    ERROR_TYPES[ERROR_TYPES["UNAUTHORIZED"] = 1] = "UNAUTHORIZED";
+    ERROR_TYPES[ERROR_TYPES["FORBIDDEN"] = 2] = "FORBIDDEN";
+})(ERROR_TYPES || (ERROR_TYPES = {}));
+function mostrarMensaje(tipoDeError) {
+    if (tipoDeError == ERROR_TYPES.NOT_FOUND) {
+        console.log("No se encuentra el recurso");
+    }
+    else if (tipoDeError == ERROR_TYPES.UNAUTHORIZED) {
+        console.log("No tiene permisos para acceder");
+    }
+    else if (tipoDeError == ERROR_TYPES.FORBIDDEN) {
+        console.log("No tiene permisos para acceder");
+    }
+}
+mostrarMensaje(1);

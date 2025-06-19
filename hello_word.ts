@@ -194,12 +194,23 @@ language.push("Swift")
 console.log(language);
 console.log(typeof language);
 
-//Matrices
+
+
+//Matriz de 3 x 3
+
+const board: string[][] = [
+    ['X','',''],
+    ['','X',''],
+    ['','','O']
+]
+
+//Tuplas
+//son arrays fijos de longitud
 
 type CellValue = 'X' | 'O' | ''
 type GameBoard = [
     [CellValue, CellValue, CellValue],
-    [CellValue, CellValue, CellValue]
+    [CellValue, CellValue, CellValue],
     [CellValue, CellValue, CellValue]
 ]
 
@@ -212,4 +223,28 @@ console.log(gameBoar)
 
 //Si no le decimos los valores que queremos en las celdas y la cantidad,
 // el usuario puede escribir cualquier cosa las veces que quiera.
+// Si queremos que sean fijas y que no sean mutables agregar readonly en su definicion
+
+//Enums
+enum ERROR_TYPES {
+    NOT_FOUND, // 0
+    UNAUTHORIZED, // 1
+    FORBIDDEN // 2
+}
+function mostrarMensaje(tipoDeError: ERROR_TYPES){
+    if(tipoDeError == ERROR_TYPES.NOT_FOUND){
+        console.log("No se encuentra el recurso")
+    }else if(tipoDeError == ERROR_TYPES.UNAUTHORIZED){
+        console.log("No tiene permisos para acceder")
+    }else if(tipoDeError == ERROR_TYPES.FORBIDDEN){
+        console.log("No tiene permisos para acceder")
+    }
+}
+
+mostrarMensaje(1)
+
+
+
+
+
 
